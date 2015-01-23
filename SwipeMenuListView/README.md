@@ -181,3 +181,19 @@ listView.setOpenInterpolator(...);
 <p>
    <img src="demo2.gif" width="320" alt="Screenshot"/>
 </p>
+
+
+Last Update 01.23.2015 --- popaandrei
+=====================================
+
+* I added a new click listener like OnItemClickListener that occurs when list item is touched.
+To perform this action you must create a new class that implement com.baoyz.swipemenulistview.SwipeMenuListView.OnNormalItemClick and ovveride the method executeAction(position) that represents the action that must be performed when the item is clicked.
+Also you must set the click listener to the swipelist: swipeList.setOnItemClick(onNormalItemClick); (onNormalItemClick represents your object that impelments OnNormalItemClick).
+
+* The second improvement is that Font Awesome library was included (http://fortawesome.github.io/Font-Awesome/). So now when you set a title for an item you can specify also the icon:
+
+```java
+SwipeMenuItem deleteItem = new SwipeMenuItem(context);
+deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9, 0x3F, 0x25)));
+deleteItem.setTitle("{fa-trash-o} delete this item");
+```

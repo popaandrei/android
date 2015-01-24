@@ -121,22 +121,6 @@ public class SwipeMenuLayout extends FrameLayout {
 
 		addView(mContentView);
 		addView(mMenuView);
-
-		// if (mContentView.getBackground() == null) {
-		// mContentView.setBackgroundColor(Color.WHITE);
-		// }
-
-		// in android 2.x, MenuView height is MATCH_PARENT is not work.
-		// getViewTreeObserver().addOnGlobalLayoutListener(
-		// new OnGlobalLayoutListener() {
-		// @Override
-		// public void onGlobalLayout() {
-		// setMenuHeight(mContentView.getHeight());
-		// // getViewTreeObserver()
-		// // .removeGlobalOnLayoutListener(this);
-		// }
-		// });
-
 	}
 
 	@Override
@@ -277,8 +261,6 @@ public class SwipeMenuLayout extends FrameLayout {
 		mContentView.layout(0, 0, getMeasuredWidth(), mContentView.getMeasuredHeight());
 		mMenuView.layout(getMeasuredWidth(), 0, getMeasuredWidth() + mMenuView.getMeasuredWidth(),
 				mContentView.getMeasuredHeight());
-		// setMenuHeight(mContentView.getMeasuredHeight());
-		// bringChildToFront(mContentView);
 	}
 
 	public void setMenuHeight(int measuredHeight) {

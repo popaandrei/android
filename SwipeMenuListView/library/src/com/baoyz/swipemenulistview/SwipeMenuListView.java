@@ -183,7 +183,9 @@ public class SwipeMenuListView extends ListView {
 			} else {
 				if (mTouchView != null) {
 					swipeAction = false;
-					onNormalItemClick.executeAction(mTouchView.getPosition());
+					if (onNormalItemClick != null) {
+						onNormalItemClick.executeAction(mTouchView.getPosition());
+					}
 				}
 			}
 

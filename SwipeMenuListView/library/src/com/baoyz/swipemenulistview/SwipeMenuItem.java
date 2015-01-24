@@ -1,6 +1,5 @@
 package com.baoyz.swipemenulistview;
 
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
@@ -20,6 +19,16 @@ public class SwipeMenuItem {
 	private int titleColor;
 	private int titleSize;
 	private int width;
+	private int type; // can be used when you have multiple menu types and you
+						// need to know from which menu type comes the action
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
 
 	public SwipeMenuItem(Context context) {
 		mContext = context;
